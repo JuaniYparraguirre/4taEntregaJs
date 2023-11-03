@@ -1,0 +1,197 @@
+body {
+  background-color: #1e1e1e;
+  font-family: "RobotoDraft", "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin: 0px;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.center {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor {
+  border-radius: 16px;
+}
+
+/* End Non-Essential  */
+
+.property_card {
+  height: 18em;
+  width: 14em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  border-radius: 16px;
+  overflow: hidden;
+  -webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+
+/* Top Half of card, image. */
+
+.property-image {
+  height: 6em;
+  width: 14em;
+  padding: 1em 2em;
+  position: fixed;
+  top: 0px;
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  /* background-image: url("https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Bottom Card Section */
+
+.property-description {
+  background-color: #fafafc;
+  height: 18em;
+  width: 14em;
+  position: absolute;
+  bottom: 0em;
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 0.5em 1em;
+  text-align: center;
+}
+
+/* Social Icons */
+
+.property-social-icons {
+  width: 1em;
+  height: 1em;
+  background-color: black;
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Property Cards Hover States */
+
+.property_card:hover .property-description {
+  height: 0em;
+  padding: 0px 1em;
+}
+.property_card:hover .property-image {
+  height: 18em;
+}
+
+.property_card:hover .property-social-icons {
+  background-color: white;
+}
+
+.property_card:hover .property-social-icons:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+.property-image-title {
+  text-align: center;
+  position: Relative;
+  top: 30%;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+  color: black;
+  font-size: 1.2em;
+}
+
+.property_card:hover .property-image-title {
+  opacity: 1;
+}
+
+.form {
+  height: 18em;
+  width: 14em;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 16px;
+  -webkit-box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+}
+.number-wrapper {
+  position: relative;
+  padding: 10px;
+  border-radius: 6px;
+}
+.number-wrapper input[type="number"] {
+  padding: 10px 0;
+  text-align: center;
+  height: 50px;
+  border-radius: 11px;
+}
+.number-wrapper:hover:after,
+.number-wrapper:hover:before {
+  width: 10px;
+  height: 10px;
+  font-size: 10px;
+  position: absolute;
+  top: 0;
+  right: 4px;
+  bottom: 0;
+  margin: auto;
+  background: green;
+  pointer-events: none;
+}
+.number-wrapper:hover:after {
+  content: "\25B2";
+  color: blue;
+  bottom: auto;
+}
+.number-wrapper:hover:before {
+  content: "\25BC";
+  color: red;
+  top: auto;
+}
+
+.btn {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 200px;
+  border-radius: 11px;
+  background-color: white;
+  border: 2px solid #f44336;
+  padding: 10px;
+}
+.btn:hover {
+  background: #da190b;
+  color: white;
+}
+.btn p {
+  font-size: 20px;
+  font-weight: 700;
+}
